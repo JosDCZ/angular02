@@ -27,7 +27,7 @@ export class MascotasService {
   }
 
   mascotaById(id:string):Observable<IMascota>{
-    if (id.length>=1) {
+    if (id != "") {
       return this.http.get<IMascota>(`${this.baseUrl}/mascotas/${id}`);
     } else {
       return this.http.get<IMascota>(`${this.baseUrl}/mascotas/`);
