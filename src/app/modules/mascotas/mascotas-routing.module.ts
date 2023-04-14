@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListarComponent } from './pages/listar/listar.component';
+import { MascotaComponent } from './pages/mascota/mascota.component';
 
 const routes: Routes = [
-  { path:'listar',component: ListarComponent,title:'Listar' }
+  { path:'listar',component: ListarComponent,title:'Listar' },
+  { path:':id',component: MascotaComponent,title:'Detalle' }
 ];
 
 @NgModule({

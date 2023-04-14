@@ -6,12 +6,14 @@ import { CardComponent } from './components/card/card.component';
 import { ListarComponent } from './pages/listar/listar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MascotaComponent } from './pages/mascota/mascota.component';
 
 
 @NgModule({
   declarations: [
     CardComponent,
-    ListarComponent
+    ListarComponent,
+    MascotaComponent
   ],
   imports: [
     CommonModule,

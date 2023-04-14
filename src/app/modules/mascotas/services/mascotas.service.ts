@@ -18,5 +18,20 @@ export class MascotasService {
     return this.http.get<IMascota[]>(`${this.baseUrl}/mascotas`);
    }
 
+  buscarMascota(termino:string):Observable<IMascota[]>{
+    if (termino.length>1) {
+      return this.http.get<IMascota[]>(`${this.baseUrl}/mascotas/?q=${termino}&_limit=5`);
+    } else {
+      return this.http.get<IMascota[]>(`${this.baseUrl}/mascotas`);
+    }
+  }
+
+  mascotaById(id:string):Observable<IMascota>{
+    if (id.length>=1) {
+      return this.http.get<IMascota>(`${this.baseUrl}/mascotas/${id}`);
+    } else {
+      return this.http.get<IMascota>(`${this.baseUrl}/mascotas/`);
+    }
+  }
 
 }

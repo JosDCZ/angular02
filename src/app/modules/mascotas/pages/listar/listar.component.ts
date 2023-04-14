@@ -10,17 +10,19 @@ import { MascotasService } from '@modules/mascotas/services/mascotas.service';
 })
 
 export class ListarComponent implements OnInit {
-  mascotas: IMascota[] = []; //array de mascotas
+  mascotitass: IMascota[] = []; //array de mascotas
   parametroBuscar: string = ''; //parametro de busqueda
 
+  // Inyectar el servicio
   constructor(private mascotasService: MascotasService) { }
 
   ngOnInit(): void {
-    this.mascotasService.mascotas.subscribe((resp) =>{this.mascotas=resp;});
+    this.mascotasService.mascotas.subscribe((resp) =>{this.mascotitass=resp;});
   }
 
 
   buscar(): void { // metodo para buscar
+    this.mascotasService.buscarMascota(this.parametroBuscar).subscribe((resp) =>{this.mascotitass=resp;});
   }
 
 

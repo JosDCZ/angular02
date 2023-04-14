@@ -17,7 +17,7 @@ import { MascotasModule } from '@modules/mascotas/mascotas.module';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SkeletonComponent
+    SkeletonComponent,
   ],
   imports: [
     BrowserModule,
