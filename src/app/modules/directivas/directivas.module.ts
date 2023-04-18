@@ -9,6 +9,7 @@ import { NgStyleComponent } from './pages/ng-style/ng-style.component';
 import { NgClassComponent } from './pages/ng-class/ng-class.component';
 import { NgModelComponent } from './pages/ng-model/ng-model.component';
 import { FormsModule } from '@angular/forms';
+import { NgForComponent } from './pages/ng-for/ng-for.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     BindingComponent,
     NgStyleComponent,
     NgClassComponent,
-    NgModelComponent
+    NgModelComponent,
+    NgForComponent
   ],
   imports: [
     CommonModule,

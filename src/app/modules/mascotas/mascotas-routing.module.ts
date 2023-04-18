@@ -5,7 +5,8 @@ import { MascotaComponent } from './pages/mascota/mascota.component';
 
 const routes: Routes = [
   { path:'listar',component: ListarComponent,title:'Listar' },
-  { path:':id',component: MascotaComponent,title:'Detalle' }
+  { path:':id',component: MascotaComponent,title:'Detalle' },
+  { path:':id/:raza',component: MascotaComponent,title:'Detalle' }
 ];
 
 @NgModule({

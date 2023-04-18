@@ -1,26 +1,97 @@
 <header class="bg-light ppy5">
   <div class="container px-5">
     <div class="row gx-5 justify-content-center">
-      <div class="col-lg-8">
-        <h1 class="display-5 fw-bolder text-info mb2">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bolder text-info mb2 my-5">
           Diplomado de especialización
         </h1>
-        <h2 class="h4 fw-bolder text info mb-2"> {{ year | date : "YYYY" }} </h2>
+        <h2 class="h4 fw-bolder text info mb-2">{{ year | date : "YYYY" }}</h2>
         <p class="lead text-dark-50 mb-4">
           Desarrolla tus destrezas prácticas en programación, diseño web,
           lenguajes, base de datos, servidores, API’s y sistemas de control de
           versiones.
         </p>
       </div>
-      <div class="col-lg-4">
-        <div class="text-center my-5">
+      <div class="col-lg-6">
+        <div class="my-5">
           <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
             <div class="mt-3">
-              <p style="color: rgb(224, 15, 15)">
+              <p style="color: rgb(224, 15, 15)" class="text-center">
                 <strong>
                   Este espacio es para que agregues tu propio componente</strong
                 >
               </p>
+              <div class="row">
+                <div *ngIf="weather" class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img
+                        [src]="image + weather.weather[0].icon + '.png'"
+                        class="img-fluid rounded-start"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          {{ weather.name }}, {{ weather.sys.country }}
+                        </h5>
+                        <div class="card" style="width: 100%">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              Temperatura: {{ weather.main.temp }}°C
+                            </li>
+                            <li class="list-group-item">
+                              Coordenadas: {{ weather.coord.lat }},
+                              {{ weather.coord.lon }}
+                            </li>
+                            <li class="list-group-item">
+                              Humedad: {{ weather.main.humidity }}% Presión:
+                              {{ weather.main.pressure }}hPa
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <p class="card-text text-center">
+                        <small class="text-muted"
+                          >Descripción: {{ weather.weather[0].main }} -
+                          {{ weather.weather[0].description }} | Visibilidad:
+                          {{ (weather.visibility / 1000).toFixed(2) }}km
+                        </small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="card card-body">
+                  <form  (ngSubmit)="ngSubmitLocalizacion(ciudadName, paisName)">
+                    <div class="row">
+                      <div class="col-4">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Nombre Ciudad"
+                          #ciudadName
+                        />
+                      </div>
+                      <div class="col-4">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Abreviatura País"
+                          #paisName
+                        />
+                      </div>
+                      <div class="col-4">
+                        <div class="d-grid gap-2">
+                          <button class="btn btn-primary">Obtener</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>

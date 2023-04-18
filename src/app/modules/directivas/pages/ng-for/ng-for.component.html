@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <label class="form-label">seleccione</label>
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Open this select menu</option>
+    <option [value]="x.id" *ngFor="let x of stores">{{x.carnet}} - {{x.nombre}} </option>
+  </select>
+  <hr>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let val of stores">{{val.carnet}} - {{val.nombre}} </li>
+  </ul>
+</div>

@@ -7,6 +7,7 @@ import { NgStyleComponent } from './pages/ng-style/ng-style.component';
 import { BindingComponent } from './pages/binding/binding.component';
 import { NgClassComponent } from './pages/ng-class/ng-class.component';
 import { NgModelComponent } from './pages/ng-model/ng-model.component';
+import { NgForComponent } from './pages/ng-for/ng-for.component';
 
 const routes: Routes = [
   { path: 'ngIf', component: NgIFComponent, title: 'ngIf' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'ngClass', component: NgClassComponent, title: 'ngClass' },
   { path: 'binding', component: BindingComponent, title: 'binding' },
   { path: 'ngModel', component: NgModelComponent, title: 'ngModel' },
+  { path: 'ngFor', component: NgForComponent, title: 'ngFor' },
 ];
 
 @NgModule({

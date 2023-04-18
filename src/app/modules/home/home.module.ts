@@ -6,6 +6,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeComponent } from './pages/home/home.component';
 import { DetalleComponent } from './pages/detalle/detalle.component';
 import { Error404Component } from './pages/error404/error404.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { Error404Component } from './pages/error404/error404.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class HomeModule { }
