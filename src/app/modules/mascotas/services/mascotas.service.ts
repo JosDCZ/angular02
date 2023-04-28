@@ -37,4 +37,8 @@ export class MascotasService {
   deleteMascota(id: string): Observable<IMascota> {
     return this.http.delete<IMascota>(`${this.baseUrl}/mascotas/${id}`);
   }
+
+  borrarMascota(pet: IMascota): Observable<IMascota> {
+    return this.http.delete<IMascota>(`${this.baseUrl}/mascotas/${pet.id}`);
+  }
 }

@@ -11,6 +11,8 @@ import { SkeletonComponent } from './layout/skeleton/skeleton.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { MascotasModule } from '@modules/mascotas/mascotas.module';
+import { Error404Component } from '@shared/error404/error404.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { MascotasModule } from '@modules/mascotas/mascotas.module';
     HeaderComponent,
     FooterComponent,
     SkeletonComponent,
+    Error404Component,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { MascotasModule } from '@modules/mascotas/mascotas.module';
     AppRoutingModule,
     CoreModule,
     SharedModule,
-    MascotasModule
+    MascotasModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     {

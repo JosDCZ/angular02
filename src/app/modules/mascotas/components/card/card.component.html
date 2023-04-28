@@ -7,6 +7,7 @@
       <p class="card-text"><strong>Peso </strong>{{obj.peso}}</p>
       <p class="card-text"><strong>Guardian </strong>{{obj.guardian}}</p>
       <a [routerLink]="['/mascotas/',obj.id, obj.raza]" class="btn btn-primary">Leer más</a>
+      <a (click)="eliminarPets(obj)" class="btn btn-warning m-1">Quitar</a>
     </div>
   </div>
 </div>

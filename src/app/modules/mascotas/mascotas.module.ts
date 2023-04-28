@@ -13,13 +13,13 @@ import { MascotaComponent } from './pages/mascota/mascota.component';
   declarations: [
     CardComponent,
     ListarComponent,
-    MascotaComponent
+    MascotaComponent,
   ],
   imports: [
     CommonModule,
     MascotasRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ]
 })
 export class MascotasModule { }

@@ -1,7 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { SkeletonComponent } from "./layout/skeleton/skeleton.component";
-import { Error404Component } from "@modules/home/pages/error404/error404.component";
+import { Error404Component } from "@shared/error404/error404.component";
+import { FormularioComponent } from "@shared/formulario/formulario.component";
 
 const routes: Routes=[
 
@@ -14,7 +15,9 @@ const routes: Routes=[
       { path: 'directivas', loadChildren: () => import('@modules/directivas/directivas.module').then(m => m.DirectivasModule)}
     ]
  },
- {path: '**', component: Error404Component}
+ {path: 'Formulario', component: FormularioComponent, title: 'Formulario'},
+ {path: 'Error', component: Error404Component, title: 'Errorr'},
+ {path: '**', redirectTo: 'Error'}
 ];
 
 @NgModule({
