@@ -41,4 +41,20 @@ export class MascotasService {
   borrarMascota(pet: IMascota): Observable<IMascota> {
     return this.http.delete<IMascota>(`${this.baseUrl}/mascotas/${pet.id}`);
   }
+
+  borrarMascot(pet: IMascota): any {
+    const url = `${this.baseUrl}/mascotas/${pet.id}`;
+    return this.http.delete(url);
+  }
+
+  nuevaMascota(pet: IMascota): any {
+    const url = `${this.baseUrl}/mascotas/`;
+    return this.http.post(url, pet);
+  }
+
+  editarMascota(pet: IMascota): any {
+    console.log(pet);
+    const url = `${this.baseUrl}/mascotas/${pet.id}`;
+    return this.http.put(url, pet);
+  }
 }
