@@ -13,6 +13,8 @@ const routes: Routes=[
       { path: '', loadChildren: () => import('@modules/home/home.module').then(m => m.HomeModule) },
       { path: 'mascotas', loadChildren: () => import('@modules/mascotas/mascotas.module').then(m => m.MascotasModule) },
       { path: 'directivas', loadChildren: () => import('@modules/directivas/directivas.module').then(m => m.DirectivasModule)},
+      { path: 'subir', loadChildren: () => import('@modules/subir-archivos/subir-archivos.module').then(m => m.SubirArchivosModule)},
+      { path: 'excel', loadChildren: () => import('@modules/cargarexcel/cargarexcel.module').then(m => m.CargarexcelModule)},
       { path: 'scroll', loadChildren: () => import('@modules/anime/anime.module').then(m => m.AnimeModule) }
     ]
  },

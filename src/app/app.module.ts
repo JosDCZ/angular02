@@ -14,6 +14,7 @@ import { MascotasModule } from '@modules/mascotas/mascotas.module';
 import { Error404Component } from '@shared/error404/error404.component';
 import { ToastrModule } from 'ngx-toastr';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -25,7 +25,7 @@ export class AnimeService {
 
   getCardsAnimeForma2(nombreCard: string | null, offset = 0) {
     const params: any = {
-      num: 5,
+      num: 50,
       offset,
     };
     if (nombreCard) params.fname = nombreCard;
@@ -36,7 +36,7 @@ export class AnimeService {
 
   busquedas(nombreCard:string | null, offset = 0){
     const params: any = {
-      num: 5,
+      num: 50,
       offset,
     };
     if (nombreCard) {

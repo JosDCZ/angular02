@@ -1,0 +1,37 @@
+<div class="d-flex p-2 m-5"></div>
+
+<div class="container">
+  <input
+    type="file"
+    name=""
+    id=""
+    class="file-input form-control"
+    #fileUpload
+    (change)="onFileSelected($event)"
+  />
+  <hr />
+  <div class="file-upload">
+    <button type="button" class="btn btn-primary" (click)="subir()">
+      Subir
+    </button>
+  </div>
+
+  <h1>Subir varios archivos</h1>
+  <div class="form-group">
+    <label for="file">File</label>
+    <input
+      id="file"
+      name="file"
+      type="file"
+      multiple
+      class="form-control"
+      (change)="onFileChange($event)"
+    />
+    <hr />
+    <div class="file-upload mt-2">
+      <button type="button" class="btn btn-primary" (click)="multiple()">
+        Multiple
+      </button>
+    </div>
+  </div>
+</div>

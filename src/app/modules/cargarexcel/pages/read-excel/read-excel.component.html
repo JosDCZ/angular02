@@ -1,0 +1,53 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <div>
+              <input type="file" class="form-control" (change)="leerFile($event)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <table class="table" *ngIf="pacientes">
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>nombrePaciente</th>
+                <th>apellidoPaciente</th>
+                <th>identPaciente</th>
+                <th>direccionPaciente</th>
+                <th>telefonoPaciente</th>
+                <th>emailPaciente</th>
+                <th>tieneExpediente</th>
+                <th>fechaNacimiento</th>
+                <th>fechaVencimientoDui</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let x of pacientes">
+                <td>{{x.idPaciente}}</td>
+                <td>{{x.nombrePaciente}}</td>
+                <td>{{x.apellidoPaciente}}</td>
+                <td>{{x.identPaciente}}</td>
+                <td>{{x.direccionPaciente}}</td>
+                <td>{{x.telefonoPaciente}}</td>
+                <td>{{x.emailPaciente}}</td>
+                <td>{{x.tieneExpediente}}</td>
+                <td>{{x.fechaNacimiento}}</td>
+                <td>{{x.fechaVencimientoDui}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+
+  </div>
